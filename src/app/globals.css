@@ -16,20 +16,58 @@
   --color-brand-dark: var(--color-brand-dark);
   --color-dark: var(--color-dark);
   --color-dark-2: var(--color-dark-2);
-  --font-sans: var(--font-poppins);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-fraunces);
 }
 
 html {
   overflow-x: hidden;
   width: 100%;
+  scroll-behavior: smooth;
+}
+
+/* Offset anchor-scroll targets so the fixed header never covers the
+   top of a section when navigating via the nav links. */
+section[id] {
+  scroll-margin-top: 84px;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
   overflow-x: hidden;
   width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-fraunces), Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Consistent section-heading scale used across Services, Tariffs,
+   How It Works, Drivers, Testimonials and Booking sections */
+.h2-section {
+  font-size: clamp(1.75rem, 1.35rem + 2vw, 2.75rem);
+  line-height: 1.15;
+}
+
+/* Hero headline - large, high-contrast display scale */
+.h1-hero {
+  font-size: clamp(2.5rem, 1.85rem + 3.2vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
 }
 
 img {
@@ -75,6 +113,7 @@ img {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  min-height: 44px;
   background: var(--color-brand);
   color: var(--color-dark);
   font-weight: 700;
@@ -94,6 +133,7 @@ img {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  min-height: 44px;
   border: 2px solid rgba(255, 255, 255, 0.25);
   color: #fff;
   font-weight: 600;

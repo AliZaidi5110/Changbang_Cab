@@ -22,14 +22,14 @@ export default function Hero() {
         <div className="absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-brand/10 blur-3xl" />
       </div>
 
-      <div className="container-x relative grid gap-16 lg:grid-cols-2 lg:items-center">
+      <div className="container-x relative grid gap-16 lg:grid-cols-2 lg:items-start">
         <div>
           <span className="section-label text-brand">Welcome to {site.name}</span>
-          <h1 className="mt-5 text-4xl font-extrabold leading-[1.1] text-white sm:text-5xl lg:text-6xl">
-            Get Your <span className="text-brand">Taxi</span> Online in
-            Minutes
+          <h1 className="h1-hero mt-5 font-bold text-white">
+            Get Your <span className="text-brand italic">Taxi</span> Online
+            in Minutes
           </h1>
-          <p className="mt-6 max-w-lg text-gray-300 text-lg">
+          <p className="mt-6 max-w-lg text-gray-300 text-[1.05rem] sm:text-lg">
             {site.name} brings you fast, safe and affordable rides around the
             clock. Airport transfers, city trips or a booked hotel stay &mdash;
             one call is all it takes.
@@ -69,32 +69,9 @@ export default function Hero() {
         </div>
 
         <div className="relative">
-          {/* Decorative car overlap - desktop only */}
-          <div className="pointer-events-none absolute -top-32 right-[-15%] hidden w-[130%] max-w-xl opacity-90 lg:block">
-            <Image
-              src="/images/car-big-2.png"
-              alt="Chongbang Cab taxi car"
-              width={900}
-              height={500}
-              className="w-full h-auto drop-shadow-2xl"
-              priority
-            />
-          </div>
-
-          {/* Car image in normal flow for mobile/tablet */}
-          <div className="mb-6 flex justify-center lg:hidden">
-            <Image
-              src="/images/car-big-2.png"
-              alt="Chongbang Cab taxi car"
-              width={500}
-              height={280}
-              className="h-auto w-full max-w-xs sm:max-w-sm drop-shadow-2xl"
-              priority
-            />
-          </div>
-
-          <div className="relative mx-auto max-w-md rounded-3xl bg-dark-2/95 backdrop-blur p-6 sm:p-8 shadow-2xl shadow-black/40 ring-1 ring-white/10 lg:mt-16">
-            <div className="absolute -top-5 -left-5 flex h-24 w-24 items-center justify-center rounded-2xl bg-brand text-dark shadow-lg rotate-[-6deg]">
+          {/* Call-now card: always in normal flow, always on top - never overlapped by the car */}
+          <div className="relative z-20 mx-auto max-w-md rounded-3xl bg-dark-2/95 backdrop-blur p-6 sm:p-8 shadow-2xl shadow-black/40 ring-1 ring-white/10">
+            <div className="absolute -top-5 -right-5 flex h-20 w-20 items-center justify-center rounded-2xl bg-brand text-dark shadow-lg rotate-[8deg]">
               <span className="text-center text-xs font-extrabold leading-tight">
                 RIDE
                 <br />
@@ -102,7 +79,7 @@ export default function Hero() {
               </span>
             </div>
 
-            <p className="text-sm uppercase tracking-widest text-brand font-semibold">
+            <p className="max-w-[70%] text-sm uppercase tracking-widest text-brand font-semibold">
               Call Taxi Now
             </p>
             <a
@@ -114,7 +91,7 @@ export default function Hero() {
               </span>
               {site.phone}
             </a>
-            <p className="mt-4 text-gray-400 text-sm">
+            <p className="mt-4 text-gray-400 text-base">
               {site.hours}. Our friendly operators are standing by to get you
               moving.
             </p>
@@ -132,10 +109,27 @@ export default function Hero() {
 
             <a
               href={site.emailHref}
-              className="mt-6 block text-center text-sm text-gray-400 hover:text-brand transition-colors"
+              className="mt-6 block text-center text-base text-gray-400 hover:text-brand transition-colors"
             >
               {site.email}
             </a>
+          </div>
+
+          {/* Car - anchored bottom-right, placed in normal flow below the card
+              so it can never overlap the headline or the card's text/badges. */}
+          <div className="pointer-events-none relative z-10 mt-6 flex justify-center lg:mt-10 lg:justify-end">
+            <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-md">
+              {/* Ground shadow so the car reads as grounded, not floating */}
+              <div className="absolute inset-x-6 bottom-2 h-6 rounded-full bg-black/60 blur-xl sm:bottom-3 sm:h-8" />
+              <Image
+                src="/images/car-big-2.png"
+                alt="Chongbang Cab taxi car"
+                width={900}
+                height={563}
+                className="relative h-auto w-full object-contain drop-shadow-2xl"
+                priority
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -29,7 +29,7 @@ export default function Services() {
       <div className="container-x">
         <div className="text-center max-w-2xl mx-auto">
           <span className="section-label justify-center">See Our</span>
-          <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold text-dark">
+          <h2 className="h2-section mt-4 font-extrabold text-dark">
             Our Services
           </h2>
           <p className="mt-4 text-gray-500">
@@ -49,7 +49,7 @@ export default function Services() {
                 <Image src={image} alt={title} width={36} height={36} />
               </span>
               <h3 className="mt-6 text-lg font-bold text-dark">{title}</h3>
-              <p className="mt-3 text-sm text-gray-500 leading-relaxed">
+              <p className="mt-3 text-base text-gray-500 leading-relaxed">
                 {desc}
               </p>
             </div>

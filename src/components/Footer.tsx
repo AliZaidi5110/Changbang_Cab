@@ -46,7 +46,7 @@ export default function Footer() {
             {[FiFacebook, FiInstagram, FiTwitter].map((Icon, i) => (
               <span
                 key={i}
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 hover:bg-brand hover:text-dark transition-colors cursor-pointer"
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-white/5 hover:bg-brand hover:text-dark transition-colors cursor-pointer"
               >
                 <Icon size={16} />
               </span>

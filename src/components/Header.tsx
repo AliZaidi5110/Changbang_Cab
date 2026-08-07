@@ -78,7 +78,7 @@ export default function Header() {
 
         <button
           aria-label="Toggle menu"
-          className="lg:hidden text-white text-2xl"
+          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-white text-2xl lg:hidden"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <FiX /> : <FiMenu />}
@@ -93,14 +93,14 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="py-2.5 text-gray-200 hover:text-brand transition-colors"
+                className="flex items-center py-3 min-h-11 text-gray-200 hover:text-brand transition-colors"
               >
                 {link.label}
               </a>
             ))}
             <a
               href={site.phoneHref}
-              className="py-2.5 font-bold text-brand"
+              className="flex items-center py-3 min-h-11 font-bold text-brand"
             >
               Call {site.phone}
             </a>

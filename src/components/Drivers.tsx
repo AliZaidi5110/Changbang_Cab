@@ -17,10 +17,10 @@ export default function Drivers() {
       <div className="container-x grid gap-14 lg:grid-cols-2 lg:items-center">
         <div>
           <span className="section-label">For Drivers</span>
-          <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold text-dark">
+          <h2 className="h2-section mt-4 font-extrabold text-dark">
             Do You Want To Earn With Us?
           </h2>
-          <p className="mt-5 text-gray-500 leading-relaxed">
+          <p className="mt-5 text-base text-gray-500 leading-relaxed">
             Join the {site.name} driver network and enjoy steady orders,
             fair pricing and weekly payouts. We take care of the passengers
             &mdash; you focus on the road.
@@ -58,25 +58,25 @@ export default function Drivers() {
             <p className="mt-4 text-2xl sm:text-3xl font-extrabold leading-tight">
               Drive when you want. Earn what you deserve.
             </p>
-            <p className="mt-4 text-gray-400 text-sm leading-relaxed sm:max-w-[70%]">
+            <p className="mt-4 text-gray-400 text-base leading-relaxed sm:max-w-[70%]">
               Send us your details and one of our team members will get back
               to you within 24 hours.
             </p>
 
-            <div className="mt-8 space-y-4">
+            <div className="mt-8 space-y-4 sm:max-w-[78%] lg:max-w-[80%]">
               <a
                 href={site.phoneHref}
-                className="flex items-center justify-between rounded-xl bg-white/5 px-5 py-4 hover:bg-white/10 transition-colors backdrop-blur-sm"
+                className="flex items-center justify-between rounded-xl bg-dark-2 px-5 py-4 ring-1 ring-white/10 hover:bg-white/10 transition-colors"
               >
                 <span className="text-sm text-gray-300">Call us</span>
                 <span className="font-bold text-brand">{site.phone}</span>
               </a>
               <a
                 href={site.emailHref}
-                className="flex items-center justify-between rounded-xl bg-white/5 px-5 py-4 hover:bg-white/10 transition-colors backdrop-blur-sm"
+                className="flex items-center justify-between gap-3 rounded-xl bg-dark-2 px-5 py-4 ring-1 ring-white/10 hover:bg-white/10 transition-colors"
               >
-                <span className="text-sm text-gray-300">Email us</span>
-                <span className="font-bold text-brand break-all text-right ml-4">
+                <span className="shrink-0 text-sm text-gray-300">Email us</span>
+                <span className="font-bold text-brand break-all text-right text-sm sm:text-base">
                   {site.email}
                 </span>
               </a>

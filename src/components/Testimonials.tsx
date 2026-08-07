@@ -25,7 +25,7 @@ export default function Testimonials() {
       <div className="container-x">
         <div className="text-center max-w-2xl mx-auto">
           <span className="section-label justify-center">Happy Client&apos;s</span>
-          <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold text-dark">
+          <h2 className="h2-section mt-4 font-extrabold text-dark">
             Testimonials
           </h2>
           <p className="mt-4 text-gray-500">
@@ -46,7 +46,7 @@ export default function Testimonials() {
                   <FiStar key={i} fill="currentColor" />
                 ))}
               </div>
-              <p className="mt-5 text-gray-600 text-sm leading-relaxed">
+              <p className="mt-5 text-gray-600 text-base leading-relaxed">
                 &ldquo;{t.text}&rdquo;
               </p>
               <div className="mt-6 flex items-center gap-3">

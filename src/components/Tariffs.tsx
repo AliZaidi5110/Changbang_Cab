@@ -43,7 +43,7 @@ export default function Tariffs() {
       <div className="container-x">
         <div className="text-center max-w-2xl mx-auto">
           <span className="section-label justify-center">Get More Benefits</span>
-          <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold text-dark">
+          <h2 className="h2-section mt-4 font-extrabold text-dark">
             Our Tariffs
           </h2>
           <p className="mt-4 text-gray-500">
@@ -78,7 +78,7 @@ export default function Tariffs() {
               </div>
               <h3 className="mt-4 text-lg font-bold">{t.name}</h3>
               <p
-                className={`mt-3 text-sm leading-relaxed ${
+                className={`mt-3 text-base leading-relaxed ${
                   t.featured ? "text-gray-300" : "text-gray-500"
                 }`}
               >
@@ -108,7 +108,7 @@ export default function Tariffs() {
               </ul>
               <a
                 href={site.phoneHref}
-                className={`mt-8 text-center rounded-full py-2.5 font-semibold text-sm transition-colors ${
+                className={`mt-8 flex min-h-11 items-center justify-center rounded-full text-center font-semibold text-sm transition-colors ${
                   t.featured
                     ? "bg-brand text-dark hover:bg-brand-dark"
                     : "bg-dark/5 text-dark hover:bg-brand hover:text-dark"

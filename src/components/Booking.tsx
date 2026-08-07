@@ -12,7 +12,7 @@ export default function Booking() {
           <div className="relative grid gap-12 lg:grid-cols-2 lg:items-center">
             <div>
               <span className="section-label">Book A Ride</span>
-              <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
+              <h2 className="h2-section mt-4 font-extrabold text-white">
                 Ready To Ride With {site.shortName}?
               </h2>
               <p className="mt-4 text-gray-400 leading-relaxed">

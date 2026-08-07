@@ -47,7 +47,7 @@ function Step({
   return (
     <div
       className={`flex gap-4 ${
-        align === "right" ? "sm:flex-row-reverse sm:text-right" : ""
+        align === "right" ? "lg:flex-row-reverse lg:text-right" : ""
       }`}
     >
       <div className="relative flex h-14 w-14 shrink-0 items-center justify-center">
@@ -60,7 +60,7 @@ function Step({
       </div>
       <div>
         <h3 className="font-bold text-white">{title}</h3>
-        <p className="mt-1.5 text-sm text-gray-400 leading-relaxed max-w-xs">
+        <p className="mt-1.5 text-base text-gray-400 leading-relaxed max-w-xs">
           {desc}
         </p>
       </div>
@@ -70,12 +70,12 @@ function Step({
 
 export default function HowItWorks() {
   return (
-    <section className="py-24 bg-dark relative overflow-hidden">
+    <section id="how-it-works" className="py-24 bg-dark relative overflow-hidden">
       <div className="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-brand/10 blur-3xl" />
       <div className="container-x relative">
         <div className="text-center max-w-2xl mx-auto">
           <span className="section-label justify-center">Simple Process</span>
-          <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
+          <h2 className="h2-section mt-4 font-extrabold text-white">
             How It Works
           </h2>
           <p className="mt-4 text-gray-400">
