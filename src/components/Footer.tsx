@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
 import {
   FiFacebook,
@@ -31,9 +32,13 @@ export default function Footer() {
       <div className="container-x grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div>
           <div className="flex items-center gap-2">
-            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand text-dark font-extrabold text-lg">
-              C
-            </span>
+            <Image
+              src="/images/logo.png"
+              alt={`${site.name} logo`}
+              width={44}
+              height={44}
+              className="h-10 w-10 shrink-0 rounded-full object-cover"
+            />
             <span className="text-white font-extrabold text-xl">
               {site.shortName}
               <span className="text-brand"> Cab</span>

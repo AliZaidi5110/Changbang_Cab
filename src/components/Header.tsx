@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
@@ -36,9 +37,14 @@ export default function Header() {
     >
       <div className="container-x flex items-center justify-between py-3 sm:py-4">
         <Link href="#home" className="flex items-center gap-2 shrink-0 min-w-0">
-          <span className="flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-xl bg-brand text-dark font-extrabold text-base sm:text-lg">
-            C
-          </span>
+          <Image
+            src="/images/logo.png"
+            alt={`${site.name} logo`}
+            width={44}
+            height={44}
+            className="h-9 w-9 sm:h-11 sm:w-11 shrink-0 rounded-full object-cover"
+            priority
+          />
           <span className="text-white font-extrabold text-base sm:text-xl tracking-tight truncate">
             {site.shortName}
             <span className="text-brand"> Cab</span>
