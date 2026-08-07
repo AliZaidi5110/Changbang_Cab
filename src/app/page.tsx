@@ -8,6 +8,7 @@ import Testimonials from "@/components/Testimonials";
 import Booking from "@/components/Booking";
 import Footer from "@/components/Footer";
 import FloatingCall from "@/components/FloatingCall";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import BackToTop from "@/components/BackToTop";
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
       </main>
       <Footer />
       <FloatingCall />
+      <FloatingWhatsApp />
       <BackToTop />
     </>
   );

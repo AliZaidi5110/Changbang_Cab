@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FaWhatsapp } from "react-icons/fa";
 import { FiArrowRight, FiCheckCircle } from "react-icons/fi";
 import { site } from "@/lib/site";
 
@@ -69,6 +70,18 @@ export default function Drivers() {
                 className="flex items-center justify-between rounded-xl bg-dark-2 px-5 py-4 ring-1 ring-white/10 hover:bg-white/10 transition-colors"
               >
                 <span className="text-sm text-gray-300">Call us</span>
+                <span className="font-bold text-brand">{site.phone}</span>
+              </a>
+              <a
+                href={site.whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between gap-3 rounded-xl bg-dark-2 px-5 py-4 ring-1 ring-white/10 hover:bg-white/10 transition-colors"
+              >
+                <span className="flex items-center gap-2 text-sm text-gray-300">
+                  <FaWhatsapp className="text-[#25D366]" size={18} />
+                  WhatsApp us
+                </span>
                 <span className="font-bold text-brand">{site.phone}</span>
               </a>
               <a

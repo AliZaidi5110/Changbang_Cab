@@ -1,3 +1,4 @@
+import { FaWhatsapp } from "react-icons/fa";
 import {
   FiFacebook,
   FiInstagram,
@@ -83,6 +84,17 @@ export default function Footer() {
               <FiPhoneCall className="mt-0.5 text-brand shrink-0" />
               <a href={site.phoneHref} className="hover:text-brand transition-colors">
                 {site.phone}
+              </a>
+            </li>
+            <li className="flex items-start gap-3">
+              <FaWhatsapp className="mt-0.5 text-[#25D366] shrink-0" />
+              <a
+                href={site.whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-brand transition-colors"
+              >
+                Chat on WhatsApp
               </a>
             </li>
             <li className="flex items-start gap-3">

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { FaWhatsapp } from "react-icons/fa";
 import { FiMenu, FiPhoneCall, FiX } from "react-icons/fi";
 import { site } from "@/lib/site";
 
@@ -71,6 +72,15 @@ export default function Header() {
               <span className="block font-bold">{site.phone}</span>
             </span>
           </a>
+          <a
+            href={site.whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Chat on WhatsApp"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-[#25D366]/15 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-colors"
+          >
+            <FaWhatsapp size={20} />
+          </a>
           <a href="#booking" className="btn-brand">
             Book Now
           </a>
@@ -103,6 +113,15 @@ export default function Header() {
               className="flex items-center py-3 min-h-11 font-bold text-brand"
             >
               Call {site.phone}
+            </a>
+            <a
+              href={site.whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 py-3 min-h-11 font-bold text-[#25D366]"
+            >
+              <FaWhatsapp size={18} />
+              WhatsApp Us
             </a>
             <a href="#booking" className="btn-brand mt-2 w-fit">
               Book Now

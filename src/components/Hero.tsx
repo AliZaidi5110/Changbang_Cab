@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FaWhatsapp } from "react-icons/fa";
 import { FiArrowRight, FiClock, FiMapPin, FiPhoneCall } from "react-icons/fi";
 import { site } from "@/lib/site";
 
@@ -95,6 +96,16 @@ export default function Hero() {
               {site.hours}. Our friendly operators are standing by to get you
               moving.
             </p>
+
+            <a
+              href={site.whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 flex min-h-11 items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 font-semibold text-white transition-transform hover:scale-[1.02]"
+            >
+              <FaWhatsapp size={20} />
+              Chat on WhatsApp
+            </a>
 
             <div className="mt-6 grid grid-cols-2 gap-4">
               <div className="rounded-xl bg-white/5 p-4">
