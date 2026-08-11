@@ -19,22 +19,6 @@ const tariffs = [
     features: ["Up to 4 passengers", "Premium sedan", "Priority pickup"],
     featured: true,
   },
-  {
-    name: "VIP",
-    price: "£5",
-    image: "/images/tariff-3.png",
-    desc: "Travel in style with our top tier VIP fleet for special occasions.",
-    features: ["Luxury vehicle", "Professional driver", "Complimentary water"],
-    featured: false,
-  },
-  {
-    name: "Bus / Minivan",
-    price: "£4.5",
-    image: "/images/tariff-4.png",
-    desc: "Spacious minivans perfect for groups, families and extra luggage.",
-    features: ["Up to 8 passengers", "Extra luggage space", "Group travel"],
-    featured: false,
-  },
 ];
 
 export default function Tariffs() {
@@ -52,7 +36,7 @@ export default function Tariffs() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-8 max-w-3xl mx-auto sm:grid-cols-2">
           {tariffs.map((t) => (
             <div
               key={t.name}
